@@ -1,2 +1,2 @@
-# testy
-Test
+# SFinder
+Тестовый репозиторий для изучения GitHub.
