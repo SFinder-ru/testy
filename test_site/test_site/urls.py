@@ -5,5 +5,6 @@ from site_pages import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('chat/', views.chat)
+    path('chat/', views.chat),
+    path('about/', views.about_us)
 ]
