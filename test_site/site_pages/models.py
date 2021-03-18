@@ -11,12 +11,12 @@ class User(models.Model):
                                  verbose_name='Фамилия')
     prof_pic = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True,
                                  verbose_name='Аватарка')
-    github_url = models.CharField(max_length=150, blank=True,
-                                  verbose_name='Ссылка на GitHub')
-    gitlab_url = models.CharField(max_length=150, blank=True,
-                                  verbose_name='Ссылка на GitLab')
-    vk_url = models.CharField(max_length=150, blank=True,
-                              verbose_name='Ссылка на VK')
+    github_url = models.URLField(max_length=150, blank=True,
+                                 verbose_name='Ссылка на GitHub')
+    gitlab_url = models.URLField(max_length=150, blank=True,
+                                 verbose_name='Ссылка на GitLab')
+    vk_url = models.URLField(max_length=150, blank=True,
+                             verbose_name='Ссылка на VK')
 
     def __str__(self):
         return self.user_login

@@ -21,9 +21,9 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=50, verbose_name='Имя')),
                 ('last_name', models.CharField(blank=True, max_length=50, verbose_name='Фамилия')),
                 ('prof_pic', models.ImageField(blank=True, upload_to='photos/%Y/%m/%d/', verbose_name='Аватарка')),
-                ('github_url', models.CharField(blank=True, max_length=150, verbose_name='Ссылка на GitHub')),
-                ('gitlab_url', models.CharField(blank=True, max_length=150, verbose_name='Ссылка на GitLab')),
-                ('vk_url', models.CharField(blank=True, max_length=150, verbose_name='Ссылка на VK')),
+                ('github_url', models.URLField(blank=True, max_length=150, verbose_name='Ссылка на GitHub')),
+                ('gitlab_url', models.URLField(blank=True, max_length=150, verbose_name='Ссылка на GitLab')),
+                ('vk_url', models.URLField(blank=True, max_length=150, verbose_name='Ссылка на VK')),
             ],
         ),
     ]

@@ -3,7 +3,7 @@ from .models import User
 
 
 def user_profile(request):
-    profile = User.objects.filter(user_login='user1')
+    profile = User.objects.filter(user_login='user2')
     context = {
         'profile': profile,
         'title': 'Профиль пользователя'
