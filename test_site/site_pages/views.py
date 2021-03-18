@@ -1,4 +1,14 @@
 from django.shortcuts import render
+from .models import User
+
+
+def user_profile(request):
+    profile = User.objects.filter(user_login='user1')
+    context = {
+        'profile': profile,
+        'title': 'Профиль пользователя'
+    }
+    return render(request, 'site_pages/user_profile.html', context=context)
 
 
 def home(request):
