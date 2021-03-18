@@ -17,6 +17,9 @@ class User(models.Model):
                                  verbose_name='Ссылка на GitLab')
     vk_url = models.URLField(max_length=150, blank=True,
                              verbose_name='Ссылка на VK')
+    fav_users = models.ManyToManyField('FavUsers', blank=True)
+    part_projects = models.ManyToManyField('PartProjects', blank=True)
+    fav_projects = models.ManyToManyField('FavProjects', blank=True)
 
     def __str__(self):
         return self.user_login
@@ -24,6 +27,43 @@ class User(models.Model):
     class Meta:
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
+
+
+class FavUsers(models.Model):
+    fav_users = models.CharField(max_length=200, default='Отсутствует',
+                                 verbose_name="Избранные пользователи")
+
+    def __str__(self):
+        return self.fav_users
+
+    class Meta:
+        verbose_name = 'Избранный пользователь'
+        verbose_name_plural = 'Избранные пользователи'
+
+
+class PartProjects(models.Model):
+    part_projects = models.CharField(max_length=200, default='Отсутствует',
+                                     verbose_name="Проекты, в которых"
+                                                  "участвует")
+
+    def __str__(self):
+        return self.part_projects
+
+    class Meta:
+        verbose_name = 'Проект, в котором участвует'
+        verbose_name_plural = 'Проекты, в которых участвует'
+
+
+class FavProjects(models.Model):
+    fav_projects = models.CharField(max_length=200, default='Отсутствует',
+                                    verbose_name="Избранные проекты")
+
+    def __str__(self):
+        return self.fav_projects
+
+    class Meta:
+        verbose_name = 'Избранный проект'
+        verbose_name_plural = 'Избранные проекты'
 
 
 # Create your models here.

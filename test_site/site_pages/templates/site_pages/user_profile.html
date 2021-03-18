@@ -118,6 +118,30 @@
                                     <td>Отсутствует</td>
                                  {% endif %}
                               </tr>
+                              <tr>
+                                 <td class="active">Пользователи в Избранном:</td>
+                                 {% if item.fav_users|length > 0 %}
+                                    <td>{{ item.fav_users }}</td>
+                                 {% else %}
+                                    <td>Отсутствуют</td>
+                                 {% endif %}
+                              </tr>
+                              <tr>
+                                 <td class="active">Проекты в Избранном:</td>
+                                 {% if item.fav_projects|length > 0 %}
+                                    <td>{{ item.fav_projects }}</td>
+                                 {% else %}
+                                    <td>Отсутствуют</td>
+                                 {% endif %}
+                              </tr>
+                              <tr>
+                                 <td class="active">Участие в проектах:</td>
+                                 {% if item.part_projects|length > 0 %}
+                                    <td>{{ item.part_projects }}</td>
+                                 {% else %}
+                                    <td>Отсутствуют</td>
+                                 {% endif %}
+                              </tr>
                            {% endfor %}
                            </tbody>
                         </table>
