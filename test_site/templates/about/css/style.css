@@ -1,0 +1,113 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(43, 41, 41);
+}
+
+.upper-block {
+    padding-top: 50px;
+    padding-bottom: 55px;
+}
+
+.hat-nav {
+    padding-left: 100px;
+}
+.hat-nav-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    text-decoration: none;
+    padding-left: 18px;
+    color: white;
+}
+
+.main-text{
+    display: block;
+    margin-top: 200px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.main-text-strong {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+.button-main {
+    margin-top: 200px;
+    margin-left: 12px;
+    border-radius: 30px;
+    width: 370px;
+    height: 80px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    color: #F9F9F9;
+    box-shadow: inset 12px 5px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 31px;
+}
+
+.mouse-icon {
+    height: 35px;
+}
+
+.statistics-list {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 29px;
+    color: #A2A2A2;
+    margin-top: 110px;
+}
+
+.statistics-list-item {
+    padding-top: 20px;
+    margin-left: 70px;
+}
+
+.down_arrow {
+    width: 50px;
+    margin-top: 100px;
+}
+
+/* end of upper-block */
+
+.lower-block {
+    background-color: #fff;
+}
+
+.opportunities-header {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 41px;
+}
+
+.opportunities-tile {
+    margin-top: 70px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer {
+    background-color: rgb(73, 73, 73);
+    height: 90px;
+    margin-top: 400px;
+}
+
+.copyright {
+    padding-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 29px;
+    color: #F1F1F1;
+    text-align: center;
+}
