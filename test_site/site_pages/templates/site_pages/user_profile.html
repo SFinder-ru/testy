@@ -119,6 +119,14 @@
                                  {% endif %}
                               </tr>
                               <tr>
+                                 <td class="active">Дата создания профиля:</td>
+                                 <td>{{ item.created_at }}</td>
+                              </tr>
+                              <tr>
+                                 <td class="active">Последняя активность:</td>
+                                 <td>{{ item.updated_at }}</td>
+                              </tr>
+                              <tr>
                                  <td class="active">Пользователи в Избранном:</td>
                                  {% if item.fav_users|length > 0 %}
                                     <td>{{ item.fav_users }}</td>
