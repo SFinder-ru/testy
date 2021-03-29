@@ -9,7 +9,7 @@ class RegisterUserView(CreateView):
     model = AdvUser
     template_name = 'main/register.html'
     form_class = RegisterUserForm
-    success_url = 'login'
+    success_url = '/accounts/login/'
 
 
 class BBLoginView(LoginView):
