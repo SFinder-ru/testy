@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
             name='PartProjects',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('part_projects', models.CharField(default='Отсутствует', max_length=200, verbose_name='Проекты, в которыхучаствует')),
+                ('part_projects', models.CharField(default='Отсутствует', max_length=200, verbose_name='Проекты, в которых участвует')),
             ],
             options={
                 'verbose_name': 'Проект, в котором участвует',
