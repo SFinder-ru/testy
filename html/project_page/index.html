@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<header class="hat">
+    <div class="hat-wrapper">
+        <div class="hat-wrapper__pic"><img src="img/ava.jpg" alt=""></div>
+        <input type="text" class="hat-wrapper__search" placeholder="Поиск">
+    </div>
+    <div class="hat-nav">
+        <a href="#" class="hat-nav__return"><img src="img/return.png" alt=""></a>
+        <a href="#" class="hat-nav__notifications"><img src="img/notification.png" alt=""></a>
+        <a href="#" class="hat-nav__exit">Выйти из аккаунта</a>
+    </div>
+</header>
+
+<nav class="left-menu">
+    <a href="#" class="left-menu__1">Профиль</a>
+    <a href="#" class="left-menu__2">Проекты</a>
+    <a href="#" class="left-menu__3">Избранное</a>
+    <a href="#" class="left-menu__4">Подбор</a>
+</nav>
+
+<section class="main">
+    <div class="main-container">
+        <div class="main-left">
+            <img src="img/proj-cover.png" alt="">
+            <div class="main-technologies">
+                <div class="main-technologies__item">HTML</div>
+                <div class="main-technologies__item">JavaScript</div>
+                <div class="main-technologies__item">Assembler</div>
+                <div class="main-technologies__item">Python</div>
+                <div class="main-technologies__item">1C:Предприятие</div>
+                <div class="main-technologies__item">Holy Bible</div>
+                <div class="main-technologies__item" style="margin-top: 20px;">Добавить в избранное</div>
+            </div>
+        </div>
+        <div class="main-info">
+            <h1 class="main-info__title">Example project</h1>
+            <h3>Описание</h3>
+            <p class="main-info__description">Когда в поликлинике люди сидят в очереди и знают только, за кем они идут - это связный список.
+                А если человек знает еще, кто после него занял место, то это уже двусвязный список. Исключение - это бабули. 
+                Бабули в очереди, конечно, хранят в памяти весь массив, через бабулю можно обратиться к любому элементу.</p>
+            <h3>Контакты</h3>
+            <div class="main-info__contacts">
+                <a href="#">vk.com/linux_kernel</a>
+                <br>
+                <a href="#">tg.com/best-repo-ever</a>
+                <br>
+                <a href="#">odnoklassniki.ru/super@prikol</a>
+            </div>
+        </div>
+        <div class="main-team">
+            <h2>Участники</h2>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <input type="radio" name="slider" id="item-1" checked>
+                <input type="radio" name="slider" id="item-2">
+                <input type="radio" name="slider" id="item-3">
+                <div class="cards">
+                    <label class="card" for="item-1" id="song-1">
+                        <img src="img/1.jpg" alt="song">
+                    </label>
+                    <label class="card" for="item-2" id="song-2">
+                        <img src="img/2.png" alt="song">
+                    </label>
+                    <label class="card" for="item-3" id="song-3">
+                        <img src="img/3.jpg" alt="song">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
