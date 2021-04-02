@@ -2,17 +2,16 @@ from django import forms
 from django.contrib.auth import password_validation
 from django.core.exceptions import ValidationError
 from .models import AdvUser
+from .apps import user_registered
 
 
 class RegisterUserForm(forms.ModelForm):
-    email = forms.EmailField(required=False,
-                             label='Адрес электронной почты')
+
+    email = forms.EmailField(required=True)
     password1 = forms.CharField(label='Пароль',
-                                widget=forms.PasswordInput,
-                                help_text=password_validation.password_validators_help_text_html())
+                                widget=forms.PasswordInput)
     password2 = forms.CharField(label='Пароль (повторно)',
-                                widget=forms.PasswordInput,
-                                help_text='Введите тот же самый пароль еще раз для проверки')
+                                widget=forms.PasswordInput)
 
     def clean_password1(self):
         password1 = self.cleaned_data['password1']
@@ -36,9 +35,9 @@ class RegisterUserForm(forms.ModelForm):
         user.is_activated = False
         if commit:
             user.save()
+        user_registered.send(RegisterUserForm, instance=user)
         return user
 
     class Meta:
         model = AdvUser
-        fields = ('username', 'email', 'password1', 'password2',
-                  'first_name', 'last_name')
+        fields = ('username', 'email', 'password1', 'password2')
