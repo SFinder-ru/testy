@@ -1,0 +1,24 @@
+$link-transition-time: .4s
+$link-hover-color: #4646ff
+$light-text-color: #fff
+$hat-bg-color: #1f1f1fb9
+
+.hat
+	align-items: center
+	background-color: $hat-bg-color
+	display: flex
+	height: 90px
+	justify-content: space-around
+	position: absolute
+	width: 100%
+	&-menu
+		display: flex
+		justify-content: space-between
+		width: 40%
+		&__item
+			color: $light-text-color
+			font-size: 21px
+			text-decoration: none
+			transition: $link-transition-time
+			&:hover
+				color: $link-hover-color
