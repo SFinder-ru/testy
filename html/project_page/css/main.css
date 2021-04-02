@@ -115,7 +115,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 40vh;
+  height: 450px;
   width: 25%;
   float: left;
 }
@@ -154,7 +154,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 40vh;
+  height: 350px;
   width: 70%;
   margin: 0 auto;
 }
