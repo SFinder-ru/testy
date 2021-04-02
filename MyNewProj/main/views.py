@@ -20,7 +20,7 @@ class BBLogoutView(LoginRequiredMixin, LogoutView):
 
 class RegisterUserView(CreateView):
     model = AdvUser
-    template_name = 'test/register.html'
+    template_name = 'auth/register.html'
     form_class = RegisterUserForm
     success_url = '/accounts/login/'
 
