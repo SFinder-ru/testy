@@ -22,7 +22,10 @@ jobs:
     - name: Make output folder
       run: mkdir output
     - name: Clone master branch
-      run: git clone "https://${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_ACTOR}/${GITHUB_ACTOR}.github.io.git" --branch master --single-branch ./output
+      run: |
+          git clone "https://${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_ACTOR}/${GITHUB_ACTOR}.github.io.git" --branch master --single-branch ./output
+          Username: Vitaprok
+          Password: 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
     - name: Generate static pages
       run: pelican content -o output -s publishconf.py
     - name: Set git config and add changes
