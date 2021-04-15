@@ -25,7 +25,9 @@ jobs:
     - name: Clone master branch
       run: git clone https://github.com/SFinder-ru/testy.git ./output
     - name: Generate static pages
-      run: pelican content -o output -s publishconf.py
+      run: |
+          pip freeze > publishconf.py
+          pelican content -o output -s publishconf.py
     - name: Set git config and add changes
       run: |
           git config --global user.email "${GITHUB_ACTOR}@https://users.noreply.github.com/"
