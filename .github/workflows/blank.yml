@@ -23,7 +23,7 @@ jobs:
       run: mkdir output
     - name: Clone master branch
       run: |
-          git clone https://github.com/SFinder-ru/testy/tree/test_continuous_integration.git --branch master --single-branch ./output
+          git clone https://github.com/SFinder-ru/testy.git ./output
           Username: Vitaprok
           Password: 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
     - name: Generate static pages
