@@ -141,11 +141,10 @@ class Project(models.Model):
     get_creators.short_description = 'Создатели проекта'
 
     def get_comments(self):
-        all_comments_list = Comment.objects.all()
+        all_comments_list = Comment.objects.filter(project_name=self.id)
         all_comments_str = ''
         for comment in all_comments_list:
-            if comment.project_name == self.name:
-                all_comments_str += ', ' + comment.project_name
+            all_comments_str += ', ' + comment.details
         return all_comments_str.lstrip(', ')
 
     get_comments.short_description = 'Список всех комментариев проекта'
