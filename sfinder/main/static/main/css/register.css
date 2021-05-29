@@ -1,0 +1,75 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: rgb(43, 41, 41);
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    max-width: 960px;
+}
+
+/* FORM START */
+.reg-form { 
+    margin-top: 7%;
+    border-radius: 40px;
+    padding: 50px 0;
+    text-align: center;
+    background-color: rgba(31, 29, 29, 0.575);
+}
+
+.reg-form p {
+    text-align: right;
+    padding: 0 37% 0 0;
+}
+
+.reg-form__header {
+    margin-bottom: 40px;
+    color: #FFFFFF;
+    font-size: 48px;
+    text-shadow: 0 0 5px rgb(37, 37, 37);
+}
+.helptext {
+    display: none;
+}
+
+label {
+    color: #fff;
+    text-shadow: 0 0 3px black;
+    font-weight: bold;
+}
+
+.reg-form input {
+    margin-left: 10px;
+}
+
+li {
+    color: rgb(200, 202, 78);
+    text-shadow: 0 0 10px rgb(23, 63, 7);
+}
+
+.reg-form__button {
+    margin-top: 30px;
+    background-color: rgb(5, 43, 168);
+    border: none;
+    transition-duration: .35s;
+    width: 200px;
+    border: 2px solid transparent;
+}
+
+.reg-form__button:hover {
+    background-color: rgb(27, 27, 27);
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(175, 162, 162);
+}
+/* FORM END */

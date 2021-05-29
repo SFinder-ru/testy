@@ -1,0 +1,29 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Просмотр проектов - SFinder</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/logout.css' %}">
+{% endblock %}
+
+
+{% block content %}
+{% for item in object_list %}
+<div>
+    {% if item.project_logo %}
+    <img src="{{ item.project_logo.url }}" alt="" width="150">
+    {% endif %}
+    <h2>Название: {{ item.name }}</h2>
+    <h2>Описание: {{ item.description }}</h2>
+    <h2>Технологии: {{ item.get_technologies }}</h2>
+    <h2>Контакты: {{ item.contacts }}</h2>
+    <h2>Участники: {{ item.get_part_users }}</h2>
+    <h2>Создатель: {{ item.get_creators }}</h2>
+    <h2>Комментарии: {{ item.get_comments }}</h2>
+</div>
+    <h2>----------------------------------</h2>
+{% endfor %}
+{% endblock %}

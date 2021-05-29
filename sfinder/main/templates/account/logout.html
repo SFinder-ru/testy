@@ -1,0 +1,22 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Выход - SFinder</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/logout.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <p>Вы действительно хотите выйти?</p>
+    <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        {% endif %}
+        <button type="submit">Выйти</button>
+    </form>
+{% endblock %}

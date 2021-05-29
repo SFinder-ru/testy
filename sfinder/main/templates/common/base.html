@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+        <title>SFinder - главная</title>
+    {% endblock %}
+    <link rel="shortcut icon" href="{% static 'main/img/bg.jpg' %}" type="image/x-icon">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'main/css/base.css' %}">
+    {% endblock %}
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="site-header">
+        <div class="site-header__container">
+            <div class="py-2">
+                <img src="{% static 'main/img/logo.png' %}" alt="Логотип SFinder" class="logo">
+            </div>
+            <a href="/" class="py-2 d-none d-md-inline-block">Главная</a>
+            <a href="/about" class="py-2 d-none d-md-inline-block">О нас</a>
+            <a href="/accounts/login" class="py-2 d-none d-md-inline-block">Вход</a>
+            <a href="/accounts/signup" class="py-2 d-none d-md-inline-block">Регистрация</a>
+        </div>
+    </nav>
+    <!-- end of header -->
+
+    {% block content %}
+    {% endblock %}
+
+<!--    <footer class="footer align-self-end">-->
+<!--        <div class="footer__text">© Copyright 2021 SFinder - All Rights Reserved</div>-->
+<!--    </footer>-->
+    <!-- end of footer -->
+</body>
+</html>

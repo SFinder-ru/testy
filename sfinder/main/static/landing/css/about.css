@@ -1,0 +1,35 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: rgb(43, 41, 41);
+    background-image: url(../img/index/bg.jpg);
+}
+
+.upper-block {
+    padding-top: 50px;
+    padding-bottom: 55px;
+}
+
+.main-text{
+    display: block;
+    margin-top: 200px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.main-text-strong {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 78px;
+}

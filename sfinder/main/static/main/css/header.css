@@ -1,0 +1,27 @@
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.site-header__container {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    max-width: 960px;
+}
+
+.logo {
+    border-radius: 5px;
+}
+
+.site-header a {
+    margin: auto 0;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(158, 157, 157);
+    transition: ease-in-out color .15s;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}

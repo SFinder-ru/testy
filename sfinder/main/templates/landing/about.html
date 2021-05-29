@@ -1,0 +1,30 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>О нас - SFinder</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'landing/css/about.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="upper-block">
+        <div class="container">
+            <div class="row">
+                <div class="main-text col-md-12">
+                    <strong class="main-text-strong">Наши цели</strong>
+                    <p>Объединить разработчиков в единую социальную сеть направленную на совместную проектную деятельность,
+                        независимо от местонахождения пользователя.
+                        Создавать и реализовывать проекты, идеи которые будут менять мир к лучшему.
+                        Находить людей, проекты схожими с нашими интересами.</p>
+                </div>
+                <!-- end of main-text -->
+            </div>
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of upper-block -->
+{% endblock %}

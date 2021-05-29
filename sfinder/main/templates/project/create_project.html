@@ -1,0 +1,28 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Добавление проекта - SFinder</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/register.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    {{ user.pk }}
+    <div class="upper-block">
+        <div class="container">
+          <form class="reg-form" action="{% url 'create_project' %}" method="POST">
+            <h1 class="reg-form__header">Добавление проекта</h1>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="auth-form__button btn btn-primary">Добавить</button>
+          </form>
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of upper-block -->
+{% endblock %}

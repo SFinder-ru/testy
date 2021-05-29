@@ -1,0 +1,36 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Вход - SFinder</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'main/css/register.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="upper-block">
+        <div class="container">
+            {% if user.is_authenticated %}
+            <h1>Вы уже выполнили вход.</h1>
+            {% else %}
+            <form class="reg-form" action="" method="POST">
+                <h1 class="reg-form__header">Авторизация</h1>
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="reg-form__button btn btn-primary">Вход</button>
+            </form>
+            {% endif %}
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of upper-block -->
+
+    <!-- placeholders hack -->
+    <script>
+        const nameInput = document.getElementById('id_username');
+        nameInput.setAttribute('placeholder', 'tester112');
+    </script>
+{% endblock %}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой профиль - SFinder</title>
+    
+    <link rel="stylesheet" href="{% static 'profile/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'profile/css/normalize.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<header class="hat">
+    <div class="hat-wrapper">
+        <div class="hat-wrapper__pic"><img src="{% static 'profile/img/ava.jpg' %}" alt=""></div>
+        <input type="text" class="hat-wrapper__search" placeholder="Поиск">
+    </div>
+    <div class="hat-nav">
+        <a href="#" class="hat-nav__return"><img src="{% static 'profile/img/return.png' %}" alt=""></a>
+        <a href="#" class="hat-nav__notifications"><img src="{% static 'profile/img/notification.png' %}" alt=""></a>
+        <!-- <a href="#" class="hat-nav__exit">Выйти из аккаунта</a> -->
+        <form method="post" class="hat-nav__exit" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+            {% endif %}
+            <button type="submit">Выйти из аккаунта</button>
+        </form>
+    </div>
+</header>
+
+<section class="main-container">
+    <nav class="left-menu">
+        <a href="#" class="left-menu__item">Профиль</a>
+        <a href="#" class="left-menu__item">Проекты</a>
+        <a href="#" class="left-menu__item">Избранное</a>
+        <a href="#" class="left-menu__item">Подбор</a>
+    </nav>
+    <main class="project-content">
+        <div class="project-container">
+            <div class="project-left">
+                <div class="project-left__photo">
+                    <img src="{% static 'profile/img/proj-cover.jpg' %}" alt="">
+                </div>
+                <!-- /.project-left__photo -->
+                <div class="project-technologies">
+                    <div class="project-technologies__item">HTML</div>
+                    <div class="project-technologies__item">JavaScript</div>
+                    <div class="project-technologies__item">Assembler</div>
+                    <div class="project-technologies__item">Holy Bible</div>
+                </div>
+                <!-- /.project-techonlogies -->
+                <div class="project-make-fav">Добавить в избранное</div>
+            </div>
+            <!-- /.project-left -->
+            <div class="project-info">
+                <h1 class="project-info__title">{{ user.first_name }} {{ user.last_name }}</h1>
+                <h2>Описание</h2>
+                <p class="project-info__description">Жизнь это типа как колодец................там ведро чето..........и вода..................</p>
+                <h2>Контакты</h2>
+                <div class="project-info__contacts">
+                    <a href="#">ilon.mask@mail.ru</a>
+                    <a href="#">vk.com/mask_forever</a>
+                    <a href="#">icq.ru/nice_rocket</a>
+                </div>
+            </div>
+        </div>
+        <!-- /.project-info -->
+        <div class="project-team">
+            <h2>Проекты</h2>
+            <div class="team-member member-1">Аннигиляторная пушка</div>
+            <div class="team-member member-2">Space-Y</div>
+            <div class="team-member member-3">Shrek's swamp</div>
+        </div>
+        <!-- /.project-team -->
+    </main>
+</section>
+
+</body>
+</html>
